@@ -1,4 +1,4 @@
-# Alkefkix
+# Alkeflix
 
 Challenge de app para Alkemy. 
 El objetivo de este challenge es desarrollar una aplicación iOS utilizando una API
