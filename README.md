@@ -7,9 +7,8 @@ Database (TMDb). Esta API es gratuita y requiere registrarse previamente ya que 
 necesitará una clave (key) para que los endpoints respondan correctamente.
 
 Requerimientos
+
 ● Alamofire para las peticiones.
-
 ● Arquitectura MVVM.
-
 ● Realización de vistas con xibs (no storyboards).
 
