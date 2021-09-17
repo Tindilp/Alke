@@ -16,11 +16,6 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //let nib = UINib(nibName: "MenuTableViewCell", bundle: .main)
-        //register(nib, forCellReuseIdentifier:"MenuTableViewCell")
-
-        // Do any additional setup after loading the view.
     }
 
 }

@@ -14,6 +14,7 @@ class ListViewController: UIViewController {
     
     //MARK: - Atributes
     var results:[Movie] = []
+    var genres:[Genre] = []
     var isLoadin = false
     var page = 1
     
@@ -29,7 +30,14 @@ class ListViewController: UIViewController {
         tableView.delegate = self
         
         loadMovies(page: page)
+        loadGenre()
     
+    }
+    private func loadGenre(){
+        APIClient.getGenre (completionHandler:{ genress in
+            self.genres.append(contentsOf: genress)
+            self.tableView.reloadData()
+        })
     }
         private func loadMovies(page: Int){
             isLoadin = true
@@ -57,7 +65,8 @@ extension ListViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MoviesTableViewCell")as! MoviesTableViewCell
         let movie = results[indexPath.row]
-        cell.configure(for: movie)
+        let generos = obtenerGeneros(generos: movie.genre_ids ?? [])
+        cell.configure(for: movie, gnre: generos)
         return cell
        }
     }
@@ -83,4 +92,18 @@ extension ListViewController:UITableViewDelegate{
         self.present(vc, animated: true,completion: nil)
     }
     
+    func obtenerGeneros(generos:[Int]) -> [String]{
+        
+        var test:[String]=[]
+        for tipoGeneros in genres {
+            for generMovies in generos{
+                if (tipoGeneros.id! == generMovies){
+                    let nom = tipoGeneros.name!
+                    test.append(nom)
+                }
+            }
+            
+        }
+        return test
+    }
 }

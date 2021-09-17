@@ -12,6 +12,7 @@ class MovieViewController: UIViewController {
 
     // MARK: - Atributes
     var movie: Movie?
+
     private let viewModel = MoviesViewModel()
     
     @IBOutlet weak var imageMovie: UIImageView!

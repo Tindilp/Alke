@@ -20,8 +20,16 @@ struct Movie : Codable {
     var poster_path: String?
 }
 
-//to do scrollview
 struct MoviePage:Codable{
     let results:[Movie]
+}
+
+struct Genre : Codable  {
+    var id: Int?
+    var name: String?
+}
+
+struct Genres : Codable  {
+    let genres:[Genre]
 }
 

@@ -38,8 +38,6 @@ class LoginViewController: UIViewController {
     private func startApp(){
         let vc = MenuViewController(nibName: "MenuViewController", bundle: nil)
         self.present(vc, animated: true,completion: nil)
-        //let vc = ListViewController(nibName: "ListViewController", bundle: nil)
-        //self.present(vc, animated: true,completion: nil)
     }
     
     private func invalidEmail(){

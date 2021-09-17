@@ -8,14 +8,19 @@
 import UIKit
 
 class MoviesTableViewCell: UITableViewCell {
+    
+    private let viewModel = MoviesViewModel()
 
     //MARK: - Views
     @IBOutlet var SetNameLabel: UILabel!
     @IBOutlet var SetLengLabel: UILabel!
     
     //MARK: - Configure cell
-    func configure (for movie:Movie){
+    func configure (for movie:Movie, gnre:[String]){
         SetNameLabel.text = movie.original_title
-        SetLengLabel.text = "Release date: \(movie.release_date ?? " ")"
+        let g = viewModel.getStringGenre(gnre: gnre)
+        SetLengLabel.text = g
     }
+    
+
 }
