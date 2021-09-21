@@ -1,4 +1,4 @@
-# Alkeflix 🍿
+# Alkeflix
 
 Challenge de app para Alkemy. 
 El objetivo de este challenge es desarrollar una aplicación iOS utilizando una API
@@ -8,9 +8,7 @@ necesitará una clave (key) para que los endpoints respondan correctamente.
 
 Requerimientos
 
-👉 Alamofire para las peticiones.
-
-👉 Arquitectura MVVM.
-
-👉 Realización de vistas con xibs (no storyboards).
+● Alamofire para las peticiones.
+● Arquitectura MVVM.
+● Realización de vistas con xibs (no storyboards).
 
