@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -25,7 +25,6 @@
 		CBCED75226F2148500D5891B /* MovieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBCED75026F2148500D5891B /* MovieViewController.xib */; };
 		CBCED75B26F26FFB00D5891B /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCED75926F26FFB00D5891B /* MenuViewController.swift */; };
 		CBCED75C26F26FFB00D5891B /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBCED75A26F26FFB00D5891B /* MenuViewController.xib */; };
-		CBCED76726F2948D00D5891B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CBCED76626F2948D00D5891B /* Kingfisher */; };
 		CBCED77326F36AA200D5891B /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCED77226F36AA200D5891B /* MoviesViewModel.swift */; };
 		CBCEF7DC26F8E61200CB00BC /* ListGenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCEF7DA26F8E61200CB00BC /* ListGenViewController.swift */; };
 		CBCEF7DD26F8E61200CB00BC /* ListGenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBCEF7DB26F8E61200CB00BC /* ListGenViewController.xib */; };
@@ -68,7 +67,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBCED76726F2948D00D5891B /* Kingfisher in Frameworks */,
 				AFCC2F00988501140D08FEF2 /* Pods_Alkeflix.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,7 +254,6 @@
 			);
 			name = Alkeflix;
 			packageProductDependencies = (
-				CBCED76626F2948D00D5891B /* Kingfisher */,
 			);
 			productName = Alkeflix;
 			productReference = CBAEA66926EFFE6C005BFB42 /* Alkeflix.app */;
@@ -286,7 +283,6 @@
 			);
 			mainGroup = CBAEA66026EFFE6C005BFB42;
 			packageReferences = (
-				CBCED76526F2948D00D5891B /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = CBAEA66A26EFFE6C005BFB42 /* Products */;
 			projectDirPath = "";
@@ -571,25 +567,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		CBCED76526F2948D00D5891B /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.3.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		CBCED76626F2948D00D5891B /* Kingfisher */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CBCED76526F2948D00D5891B /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = Kingfisher;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CBAEA66126EFFE6C005BFB42 /* Project object */;
 }

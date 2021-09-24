@@ -79,7 +79,6 @@ extension ListGenViewController:UITableViewDelegate{
             }
             page+=1
             loadMovies(page: page)
-
         }
     }
     
@@ -100,7 +99,6 @@ extension ListGenViewController:UITableViewDelegate{
                     test.append(nom)
                 }
             }
-            
         }
         return test
     }

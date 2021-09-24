@@ -12,12 +12,13 @@ class LoginViewController: UIViewController {
     //MARK: - Atributes
     private let viewModel = MoviesViewModel()
     
+    
     //MARK: - Ciclo de vida
     @IBOutlet weak var email: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        // preguntar, en esta linea cargo la lista de generos para que aparezca en el picker, sin ella no aparecen
         viewModel.getListOfGenres()
-        
     }
     
     @IBAction func login(_ sender: Any) {

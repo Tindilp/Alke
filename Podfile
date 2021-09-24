@@ -8,5 +8,5 @@ target 'Alkeflix' do
   # Pods for Alkeflix
   
   pod 'Alamofire', '~> 5.2'
-  pod 'Kingfisher', '~> 7.0'
+  pod 'Kingfisher', '~> 6.3.1'
 end

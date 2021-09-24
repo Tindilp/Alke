@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Kingfisher
 
 class MovieViewController: UIViewController {
 
@@ -14,6 +14,7 @@ class MovieViewController: UIViewController {
     var movie: Movie?
 
     private let viewModel = MoviesViewModel()
+    var strUrl:String = "https://image.tmdb.org/t/p/w500"
     
     @IBOutlet weak var imageMovie: UIImageView!
     @IBOutlet var titleMovie: UILabel!
@@ -25,14 +26,17 @@ class MovieViewController: UIViewController {
     // MARK: - ciclo de vida
     override func viewDidLoad() {
         super.viewDidLoad()
+        imageMovie.image = nil
+        imageMovie.kf.cancelDownloadTask()
         guard let mov = movie else {return}
         self.configureDetailView(movie: mov)
     }
     
     private func configureDetailView(movie: Movie){
-        guard let url = URL(string:"\(viewModel.imageUrlPath)\(movie.poster_path ?? " ")") else {return}
-        if let data = try? Data(contentsOf: url) {
-            imageMovie.image = UIImage(data: data)}
+        let path:String = movie.poster_path ?? ""
+        if let imagUrl = URL(string: strUrl+path){
+            imageMovie.kf.setImage(with: imagUrl)
+        }
         titleMovie.text = movie.original_title
         rate.text = "Rate: \(movie.vote_average ?? 0)/10 ⭐️ "
         descrip.text = movie.overview

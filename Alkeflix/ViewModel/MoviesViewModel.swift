@@ -54,7 +54,7 @@ class MoviesViewModel {
     func getListOfNameGenre()-> [String]{
         getCleanGenreAndId()
         var names:[String]=[]
-        cleanGenreAndId.map { (key, value) in names.append(value) }
+        cleanGenreAndId.forEach { (key, value) in names.append(value) }
         return names
     }
     
@@ -62,4 +62,18 @@ class MoviesViewModel {
         getCleanGenreAndId()
         return cleanGenreAndId
     }
+    
+    func getGenresForPicker(gen:[Int:String])->[String]{
+        var g:[String] = []
+        gen.forEach{(k,v) in g.append(v)}
+        return g
+    }
+    
+    func getIdGenresForPicker(gen:[Int:String])->[Int]{
+        var id:[Int] = []
+        gen.forEach{(k,v) in id.append(k)}
+        return id
+    }
+    
+    
 }

@@ -10,7 +10,8 @@ import UIKit
 class MenuViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     
-   
+    //MARK: - Atributes
+    private let viewModel = MoviesViewModel()
     var genres:[Int:String] = [:]
     var valueSelected = ""
     var idSelected = 0
@@ -54,24 +55,16 @@ class MenuViewController: UIViewController, UIPickerViewDataSource, UIPickerView
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         var g:[String] = []
-        genres.map{(k,v) in g.append(v)}
+        g = viewModel.getGenresForPicker(gen:genres)
         return g[row]
     }
     
-    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        var g:[String] = []
-        var id:[Int] = []
-        genres.map{(k,v) in g.append(v)}
-        genres.map{(k,v) in id.append(k)}
+        let g:[String] = viewModel.getGenresForPicker(gen:genres)
+        let id:[Int] = viewModel.getIdGenresForPicker(gen:genres)
         valueSelected = g[row] as String
         idSelected = id[row] as Int
      }
-    
-//    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
-//       {
-//            // use the row to get the selected row from the picker view
-//            // using the row extract the value from your datasource (array[row])
-//        }
+
 
 }
